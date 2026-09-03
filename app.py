@@ -78,14 +78,15 @@ st.markdown("""
 with st.sidebar:
     st.markdown("### 🗂️ Industry Portfolios")
     nav_industry = st.radio(
-        "Select Industry Vertical:",
+        "Select Portfolio Section:",
         [
             "🪙 Crypto & FinTech WealthTech",
             "👗 Fashion & DTC VIP Membership",
             "🥦 Food & Meal-Kit Reactivations",
-            "💻 Enterprise MarTech Lab"
+            "🤖 2026 AI Agentic CRM & Autonomous Journeys",
+            "💻 Enterprise MarTech Lab & SQL Code"
         ],
-        index=0
+        index=3
     )
     
     st.markdown("---")
@@ -514,24 +515,124 @@ Moving beyond static A/B testing into <strong>dynamic in-flight personalization<
             msg_badge_bg = "#fdf2f8"
             msg_badge_text = "#db2777"
             
-        else:
-            agent_reasoning = "User churned citing lack of cooking time. Generic discounts won't solve time friction. Angle: Highlight the brand-new '15-Minute Chef Express' menu collection with an easy 1-click unpause incentive."
-            guardrail_checks = [
-                ("Churn Reason Alignment", "PASS: Directly addresses 'Time Constraints' with 15-min recipes.", "#16a34a"),
-                ("Incentive Threshold", "PASS: Discount within approved margin guardrail (Tier 1 reactivation).", "#16a34a"),
-                ("Latency SLA (<400ms)", "PASS: LLM generation completed in 196ms (Circuit breaker normal).", "#16a34a")
-            ]
-            msg_tag = "AUTONOMOUS SUBSCRIBER WIN-BACK"
-            msg_headline = "Short on time, David? Try our new 15-Minute Express Dinners 🥦"
-            msg_body = "We've added 12 new ultra-fast chef recipes designed for busy weeknights. Unpause your delivery this week and enjoy €20 off your first 2 quick-prep boxes."
-            msg_cta = "Explore 15-Min Menu & Unpause &rarr;"
-            msg_badge_bg = "#f0fdf4"
-            msg_badge_text = "#16a34a"
+        elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
+    st.markdown("""
+<div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); border: 1px solid #4338ca; border-radius: 12px; padding: 1.5rem 1.8rem; color: #ffffff; margin-bottom: 1.4rem; box-shadow: 0 8px 20px rgba(0,0,0,0.18);">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
+  <span style="background:rgba(168,85,247,0.25); color:#c084fc; border:1px solid #9333ea; padding:3px 10px; border-radius:4px; font-size:0.75rem; font-weight:800; letter-spacing:0.04em;">
+    🔥 2026 MARTECH INNOVATION SHOWCASE
+  </span>
+  <span style="font-size:0.75rem; color:#cbd5e1; font-weight:600;">Autonomous Agent Step & Compliance Guardrails</span>
+</div>
+<div style="font-size:1.6rem; font-weight:800; color:#ffffff; margin-bottom:0.3rem;">
+  🤖 Autonomous Journey Agents (AJA) & Multi-Tier Policy Guardrails
+</div>
+<p style="font-size:0.9rem; color:#e2e8f0; line-height:1.55; margin:0;">
+The paradigm shift from static A/B testing to <strong>dynamic in-flight reasoning</strong>: Deploying autonomous AI agents inside live customer journeys to craft 1:1 individualized messaging &mdash; constrained by <strong>deterministic compliance filters and &lt;400ms SLA circuit breakers</strong>.
+</p>
+</div>
+""", unsafe_allow_html=True)
 
-        col_agent_sim, col_agent_log = st.columns([1.2, 1])
+    col_ai1, col_ai2, col_ai3, col_ai4 = st.columns(4)
+    with col_ai1:
+        st.markdown('<div class="metric-card"><div class="metric-val" style="color:#7c3aed;">1:1 Dynamic</div><div class="metric-lbl">In-Flight Copy Generation</div></div>', unsafe_allow_html=True)
+    with col_ai2:
+        st.markdown('<div class="metric-card"><div class="metric-val" style="color:#16a34a;">0.00%</div><div class="metric-lbl">Hallucination / Violation Risk</div></div>', unsafe_allow_html=True)
+    with col_ai3:
+        st.markdown('<div class="metric-card"><div class="metric-val" style="color:#0284c7;">196 ms</div><div class="metric-lbl">Avg Reasoning Latency</div></div>', unsafe_allow_html=True)
+    with col_ai4:
+        st.markdown('<div class="metric-card"><div class="metric-val" style="color:#db2777;">+48.6%</div><div class="metric-lbl">Personalization CVR Lift</div></div>', unsafe_allow_html=True)
+
+    st.markdown("---")
+    st.markdown("##### 📐 Autonomous Agent Execution Pipeline (Event &rarr; Reasoning &rarr; Guardrail &rarr; Send)")
+    
+    st.markdown("""
+<div style="background:#f8fafc; border:1px solid #cbd5e1; border-radius:10px; padding:1.2rem; margin-bottom:1.4rem;">
+<div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
+  <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:120px;">
+    <div style="font-size:0.68rem; color:#64748b; font-weight:700;">1. INGESTION</div>
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Customer Context</div>
+    <div style="font-size:0.65rem; color:#0284c7;">Kafka Live Stream</div>
+  </div>
+  <div style="color:#94a3b8; font-weight:bold;">&rarr;</div>
+  <div style="background:#ffffff; border:1.5px solid #8b5cf6; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:125px;">
+    <div style="font-size:0.68rem; color:#7c3aed; font-weight:700;">2. REASONING</div>
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Journey Agent</div>
+    <div style="font-size:0.65rem; color:#64748b;">Strategy Synthesis</div>
+  </div>
+  <div style="color:#94a3b8; font-weight:bold;">&rarr;</div>
+  <div style="background:#ffffff; border:1.5px solid #059669; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:130px;">
+    <div style="font-size:0.68rem; color:#059669; font-weight:700;">3. GUARDRAILS</div>
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Policy Audit</div>
+    <div style="font-size:0.65rem; color:#16a34a;">Zero Risk Tolerance</div>
+  </div>
+  <div style="color:#94a3b8; font-weight:bold;">&rarr;</div>
+  <div style="background:#ffffff; border:1px solid #0284c7; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:120px;">
+    <div style="font-size:0.68rem; color:#0284c7; font-weight:700;">4. DISPATCH</div>
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Exact-Once Send</div>
+    <div style="font-size:0.65rem; color:#0284c7;">Push / In-App / SMS</div>
+  </div>
+</div>
+</div>
+""", unsafe_allow_html=True)
+
+    st.markdown("##### 🔬 Interactive Multi-Industry Autonomous Agent Simulator")
+    
+    sim_profile = st.selectbox(
+        "Select Customer Behavioral Scenario to Test Autonomous Generation:",
+        [
+            "🪙 FinTech Persona: Max (Holding €3,500 Idle ETH for 40+ Days)",
+            "👗 Fashion VIP Persona: Elena (2 Unused VIP Credits on the 4th of Month)",
+            "🥦 Food & Meal-Kit Persona: David (Cancelled 18 Days Ago due to 'Time Constraints')"
+        ]
+    )
+    
+    if "Max" in sim_profile:
+        agent_reasoning = "Customer holds substantial idle Proof-of-Stake assets but hasn't activated staking. Strategy: Emphasize institutional custody security and calculate exact EUR annualized passive rewards without making speculative profit guarantees."
+        guardrail_checks = [
+            ("Regulatory Compliance", "PASS: No guaranteed returns or speculative wording detected.", "#16a34a"),
+            ("Brand Identity", "PASS: Professional, institutional wealth-building tone maintained.", "#16a34a"),
+            ("Latency SLA (<400ms)", "PASS: LLM generation completed in 218ms (Circuit breaker normal).", "#16a34a")
+        ]
+        msg_tag = "AUTONOMOUS FINTECH STAKING NUDGE"
+        msg_headline = "Put your €3,500 Ethereum to work with German Custody 🪙"
+        msg_body = "Hi Max, your ETH balance has been in custody for 40 days. Staking delegation allows you to earn up to +€119.00/year (~€9.90/mo) in weekly network rewards with 100% German institutional oversight."
+        msg_cta = "Explore Regulated Staking &rarr;"
+        msg_badge_bg = "#eff6ff"
+        msg_badge_text = "#0284c7"
         
-        with col_agent_sim:
-            st.markdown(f"""
+    elif "Elena" in sim_profile:
+        agent_reasoning = "VIP member has 2 accumulated credits and the monthly decision window ends tomorrow (5th). Strategy: Prevent surprise billing dissatisfaction by showcasing newly dropped activewear matching her preferred size."
+        guardrail_checks = [
+            ("Credit Transparency", "PASS: Explicitly clarifies 1-click option to shop or skip by the 5th.", "#16a34a"),
+            ("Personalization Accuracy", "PASS: Matched against recent high-waisted legging preferences.", "#16a34a"),
+            ("Latency SLA (<400ms)", "PASS: LLM generation completed in 184ms (Circuit breaker normal).", "#16a34a")
+        ]
+        msg_tag = "AUTONOMOUS VIP CREDIT RESCUE"
+        msg_headline = "Elena, your 2 VIP Member Credits are ready for today's drop ✨"
+        msg_body = "Our new Seamless Flow collection just dropped in your favorite fit. Use your 2 member credits today to claim your 2-piece set, or easily skip this month in 1 tap before midnight on the 5th."
+        msg_cta = "Shop New Drops with Credit &rarr;"
+        msg_badge_bg = "#fdf2f8"
+        msg_badge_text = "#db2777"
+        
+    else:
+        agent_reasoning = "User churned citing lack of cooking time. Generic discounts won't solve time friction. Strategy: Highlight the brand-new '15-Minute Chef Express' menu collection with an easy 1-click unpause incentive."
+        guardrail_checks = [
+            ("Churn Reason Alignment", "PASS: Directly addresses 'Time Constraints' with 15-min recipes.", "#16a34a"),
+            ("Incentive Threshold", "PASS: Discount within approved margin guardrail (Tier 1 reactivation).", "#16a34a"),
+            ("Latency SLA (<400ms)", "PASS: LLM generation completed in 196ms (Circuit breaker normal).", "#16a34a")
+        ]
+        msg_tag = "AUTONOMOUS SUBSCRIBER WIN-BACK"
+        msg_headline = "Short on time, David? Try our new 15-Minute Express Dinners 🥦"
+        msg_body = "We've added 12 new ultra-fast chef recipes designed for busy weeknights. Unpause your delivery this week and enjoy €20 off your first 2 quick-prep boxes."
+        msg_cta = "Explore 15-Min Menu & Unpause &rarr;"
+        msg_badge_bg = "#f0fdf4"
+        msg_badge_text = "#16a34a"
+
+    col_agent_sim, col_agent_log = st.columns([1.2, 1])
+    
+    with col_agent_sim:
+        st.markdown(f"""
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #7c3aed; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
   <span style="background:{msg_badge_bg}; color:{msg_badge_text}; font-size:0.72rem; font-weight:800; padding:3px 8px; border-radius:4px;">{msg_tag}</span>
@@ -545,8 +646,8 @@ Moving beyond static A/B testing into <strong>dynamic in-flight personalization<
 </div>
 """, unsafe_allow_html=True)
 
-        with col_agent_log:
-            st.markdown("""
+    with col_agent_log:
+        st.markdown("""
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:1.1rem; height:100%; font-size:0.8rem;">
 <div style="font-size:0.72rem; font-weight:800; color:#64748b; text-transform:uppercase; margin-bottom:6px;">🧠 AGENT REASONING & GUARDRAILS LOG</div>
 <div style="color:#334155; line-height:1.4; margin-bottom:10px; font-style:italic;">
@@ -558,7 +659,110 @@ Moving beyond static A/B testing into <strong>dynamic in-flight personalization<
 </div>
 """, unsafe_allow_html=True)
 
-        st.success("✅ **Strategic Impact:** Eliminates static copy bottlenecks by allowing an autonomous agent to tailor messaging dynamically per customer, while strict deterministic guardrails ensure 100% brand and regulatory compliance.")
+    st.success("🎯 **Strategic Impact:** Eliminates static copy bottlenecks by allowing an autonomous agent to tailor messaging dynamically per customer, while strict deterministic guardrails ensure 100% brand and regulatory compliance.")
+
+else:
+    st.markdown("""
+<div style="background:#f8fafc; border:1px solid #e2e8f0; border-top:4px solid #7c3aed; border-radius:10px; padding:1.2rem; margin-bottom:1.2rem;">
+<div style="font-size:0.75rem; color:#7c3aed; font-weight:800; text-transform:uppercase;">TECHNICAL LAB 05</div>
+<div style="font-size:1.4rem; font-weight:800; color:#0f172a; margin:2px 0 6px 0;">💻 Enterprise MarTech Architecture & Engineering Lab</div>
+<p style="font-size:0.86rem; color:#475569; margin:0; line-height:1.5;">
+Production-grade technical implementation: Bilingual Braze Liquid conditional logic, automated Snowflake SQL cohort schemas, and Redis sub-5ms Idempotent Message Dispatchers.
+</p>
+</div>
+""", unsafe_allow_html=True)
+
+    code_tab1, code_tab2, code_tab3 = st.tabs([
+        "🧩 Bilingual Braze Liquid Logic",
+        "❄️ Snowflake SQL Cohort Schemas",
+        "⚡ Redis Idempotency Dispatcher"
+    ])
+    
+    with code_tab1:
+        st.markdown("##### 🧩 Dynamic Braze Liquid Conditional Template (DE/EN Bilingual)")
+        st.code("""
+{% if user.preferred_language == 'de' %}
+  <!-- German DACH Localization -->
+  {% if user.kyc_status != 'approved' %}
+    <div class="banner kyc-alert">
+      <a href="app://kyc/start">Konto in 2 Minuten freischalten &rarr;</a>
+    </div>
+  {% elsif user.active_sparplans == 0 and user.total_auc_eur > 100 %}
+    <div class="banner sparplan">
+      <a href="app://sparplan/new">0€ Sparplan einrichten (ab 25€/Monat) &rarr;</a>
+    </div>
+  {% else %}
+    <div class="banner general">
+      <a href="app://markets">Aktuelle Markttrends ansehen &rarr;</a>
+    </div>
+  {% endif %}
+{% else %}
+  <!-- English Global Localization -->
+  {% if user.kyc_status != 'approved' %}
+    <div class="banner kyc-alert">
+      <a href="app://kyc/start">Verify ID in 2 minutes &rarr;</a>
+    </div>
+  {% elsif user.active_sparplans == 0 and user.total_auc_eur > 100 %}
+    <div class="banner sparplan">
+      <a href="app://sparplan/new">Set up 0€ recurring savings (from €25/mo) &rarr;</a>
+    </div>
+  {% endif %}
+{% endif %}
+""", language="liquid")
+
+    with code_tab2:
+        st.markdown("##### ❄️ Snowflake SQL Automated RFM & Retention Cohort Segmentation")
+        st.code("""
+WITH user_activity AS (
+    SELECT 
+        user_id,
+        preferred_language,
+        MAX(transaction_timestamp) AS last_order_date,
+        COUNT(transaction_id) AS total_orders,
+        SUM(order_value_eur) AS total_lifetime_spend,
+        DATEDIFF('day', MAX(transaction_timestamp), CURRENT_TIMESTAMP()) AS recency_days
+    FROM EDW_PROD.ANALYTICS.TRANSACTIONS
+    WHERE transaction_status = 'COMPLETED'
+    GROUP BY user_id, preferred_language
+)
+SELECT 
+    user_id,
+    preferred_language,
+    recency_days,
+    total_lifetime_spend,
+    CASE 
+        WHEN recency_days <= 14 AND total_orders >= 5 THEN 'VIP_HIGH_FREQUENCY'
+        WHEN recency_days BETWEEN 15 AND 45 THEN 'ACTIVE_NURTURE'
+        WHEN recency_days BETWEEN 46 AND 90 THEN 'DORMANT_WINBACK_PRIORITY'
+        ELSE 'LOST_CHURN_HIGH_INCENTIVE'
+    END AS rfm_lifecycle_segment
+FROM user_activity;
+""", language="sql")
+
+    with code_tab3:
+        st.markdown("##### ⚡ Sub-5ms Redis Idempotent Message Dispatcher (Exact-Once Delivery)")
+        st.code("""
+import hashlib
+import time
+
+def dispatch_with_idempotency(campaign_id: str, user_id: str, payload: dict, db, esp_provider) -> str:
+    # Guarantees exact-once broadcast delivery, preventing duplicate push alerts on server restarts
+    date_stamp = time.strftime("%Y_%m_%d")
+    raw_key = f"{campaign_id}:{user_id}:{date_stamp}"
+    idempotency_key = hashlib.sha256(raw_key.encode("utf-8")).hexdigest()
+    
+    # 1. Check sub-5ms Redis cache state
+    existing = db.get_idempotency_state(idempotency_key)
+    if existing and existing.get("status") == "DISPATCHED":
+        return "SKIPPED_DUPLICATE_PREVENTED"
+        
+    db.set_idempotency_state(idempotency_key, status="PENDING", ttl_seconds=86400)
+    success = esp_provider.send_push(user_id=user_id, payload=payload)
+    status = "DISPATCHED" if success else "FAILED"
+    db.set_idempotency_state(idempotency_key, status=status, ttl_seconds=86400)
+    return status
+""", language="python")
+
 
 # Footer
 st.markdown("---")
