@@ -62,23 +62,23 @@ st.markdown("""
 </div>
 
 <p style="font-size:1rem; color:#cbd5e1; line-height:1.5; margin:0 0 14px 0; max-width:880px;">
-  Data-Driven Lifecycle Automation, VIP Retention, and Churn Mitigation across <strong>Crypto & FinTech</strong>, <strong>Fashion & DTC VIP Subscriptions</strong>, <strong>Food & Meal-Kit Reactivations</strong>, and <strong>Enterprise MarTech Architecture</strong>.
+  Data-Driven Lifecycle Automation, VIP Retention, and Churn Mitigation across <strong>Crypto & FinTech</strong>, <strong>Fashion & DTC VIP Subscriptions</strong>, <strong>Food & Meal-Kit Reactivations</strong>, and <strong>2026 AI Agentic CRM</strong>.
 </p>
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">5+ Years Lifecycle Strategy</span>
   <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">Braze & Liquid Expert</span>
   <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">Snowflake SQL & RFM</span>
-  <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">2026 Agentic CRM & Guardrails</span>
+  <span style="background:#1e293b; border:1.5px solid #8b5cf6; color:#c084fc; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:700;">🤖 2026 AI Agentic CRM</span>
 </div>
 </div>
 """, unsafe_allow_html=True)
 
 # Sidebar Navigation
 with st.sidebar:
-    st.markdown("### 🗂️ Industry Portfolios")
+    st.markdown("### 🗂️ Portfolios & Innovation")
     nav_industry = st.radio(
-        "Select Portfolio Section:",
+        "Select Section:",
         [
             "🪙 Crypto & FinTech WealthTech",
             "👗 Fashion & DTC VIP Membership",
@@ -104,7 +104,7 @@ with st.sidebar:
     st.caption("🔒 100% Trademark-Free & Enterprise Safe. All cases demonstrate production methodologies and quantitative models.")
 
 # ==============================================================================
-# VERTICAL 1: CRYPTO & FINTECH WEALTHTECH
+# SECTION 1: CRYPTO & FINTECH WEALTHTECH
 # ==============================================================================
 if nav_industry == "🪙 Crypto & FinTech WealthTech":
     st.markdown("""
@@ -206,7 +206,7 @@ def evaluate_market_push(user, asset, price_delta_2h):
 """, language="python")
 
 # ==============================================================================
-# VERTICAL 2: FASHION & DTC VIP MEMBERSHIP
+# SECTION 2: FASHION & DTC VIP MEMBERSHIP
 # ==============================================================================
 elif nav_industry == "👗 Fashion & DTC VIP Membership":
     st.markdown("""
@@ -267,7 +267,7 @@ Exclusive member drops are here at up to 70% off. Claim your favorites today or 
         st.markdown("**The Strategy:** Automated dynamic product bundling nudges: *'You have 2 unused member credits (€99.90 value). Unlock our curated 2-piece activewear bundle before credits roll over.'* → **-42% Credit Decay Rate**.")
 
 # ==============================================================================
-# VERTICAL 3: FOOD & MEAL-KIT REACTIVATIONS
+# SECTION 3: FOOD & MEAL-KIT REACTIVATIONS
 # ==============================================================================
 elif nav_industry == "🥦 Food & Meal-Kit Reactivations":
     st.markdown("""
@@ -332,190 +332,9 @@ Reactivate Box with €40 Discount &rarr;
         st.markdown("**The Strategy:** Before confirming cancellation, the in-app flow offers flexible alternatives: *Pause for 2 weeks*, *Switch to Bi-Weekly delivery*, or *Select budget-friendly plan*. This saves **14.8% of cancelling subscribers** on the spot.")
 
 # ==============================================================================
-# VERTICAL 4: ENTERPRISE MARTECH LAB
+# SECTION 4: 2026 AI AGENTIC CRM & AUTONOMOUS JOURNEYS (CLICK MAGNET)
 # ==============================================================================
-else:
-    st.markdown("""
-<div style="background:#f8fafc; border:1px solid #e2e8f0; border-top:4px solid #7c3aed; border-radius:10px; padding:1.2rem; margin-bottom:1.2rem;">
-<div style="font-size:0.75rem; color:#7c3aed; font-weight:800; text-transform:uppercase;">INDUSTRY VERTICAL 04</div>
-<div style="font-size:1.4rem; font-weight:800; color:#0f172a; margin:2px 0 6px 0;">💻 Enterprise MarTech Architecture & Engineering Lab</div>
-<p style="font-size:0.86rem; color:#475569; margin:0; line-height:1.5;">
-Production-grade technical implementation: Bilingual Braze Liquid conditional logic, automated Snowflake SQL cohort schemas, and Redis sub-5ms Idempotent Message Dispatchers.
-</p>
-</div>
-""", unsafe_allow_html=True)
-
-    code_tab1, code_tab2, code_tab3, code_tab4 = st.tabs([
-        "🧩 Bilingual Braze Liquid Logic",
-        "❄️ Snowflake SQL Cohort Schemas",
-        "⚡ Redis Idempotency Dispatcher",
-        "🤖 2026 Agentic CRM & Guardrails"
-    ])
-    
-    with code_tab1:
-        st.markdown("##### 🧩 Dynamic Braze Liquid Conditional Template (DE/EN Bilingual)")
-        st.code("""
-{% if user.preferred_language == 'de' %}
-  <!-- German DACH Localization -->
-  {% if user.kyc_status != 'approved' %}
-    <div class="banner kyc-alert">
-      <a href="app://kyc/start">Konto in 2 Minuten freischalten &rarr;</a>
-    </div>
-  {% elsif user.active_sparplans == 0 and user.total_auc_eur > 100 %}
-    <div class="banner sparplan">
-      <a href="app://sparplan/new">0€ Sparplan einrichten (ab 25€/Monat) &rarr;</a>
-    </div>
-  {% else %}
-    <div class="banner general">
-      <a href="app://markets">Aktuelle Markttrends ansehen &rarr;</a>
-    </div>
-  {% endif %}
-{% else %}
-  <!-- English Global Localization -->
-  {% if user.kyc_status != 'approved' %}
-    <div class="banner kyc-alert">
-      <a href="app://kyc/start">Verify ID in 2 minutes &rarr;</a>
-    </div>
-  {% elsif user.active_sparplans == 0 and user.total_auc_eur > 100 %}
-    <div class="banner sparplan">
-      <a href="app://sparplan/new">Set up 0€ recurring savings (from €25/mo) &rarr;</a>
-    </div>
-  {% endif %}
-{% endif %}
-""", language="liquid")
-
-    with code_tab2:
-        st.markdown("##### ❄️ Snowflake SQL Automated RFM & Retention Cohort Segmentation")
-        st.code("""
-WITH user_activity AS (
-    SELECT 
-        user_id,
-        preferred_language,
-        MAX(transaction_timestamp) AS last_order_date,
-        COUNT(transaction_id) AS total_orders,
-        SUM(order_value_eur) AS total_lifetime_spend,
-        DATEDIFF('day', MAX(transaction_timestamp), CURRENT_TIMESTAMP()) AS recency_days
-    FROM EDW_PROD.ANALYTICS.TRANSACTIONS
-    WHERE transaction_status = 'COMPLETED'
-    GROUP BY user_id, preferred_language
-)
-SELECT 
-    user_id,
-    preferred_language,
-    recency_days,
-    total_lifetime_spend,
-    CASE 
-        WHEN recency_days <= 14 AND total_orders >= 5 THEN 'VIP_HIGH_FREQUENCY'
-        WHEN recency_days BETWEEN 15 AND 45 THEN 'ACTIVE_NURTURE'
-        WHEN recency_days BETWEEN 46 AND 90 THEN 'DORMANT_WINBACK_PRIORITY'
-        ELSE 'LOST_CHURN_HIGH_INCENTIVE'
-    END AS rfm_lifecycle_segment
-FROM user_activity;
-""", language="sql")
-
-    with code_tab3:
-        st.markdown("##### ⚡ Sub-5ms Redis Idempotent Message Dispatcher (Exact-Once Delivery)")
-        st.code("""
-import hashlib
-import time
-
-def dispatch_with_idempotency(campaign_id: str, user_id: str, payload: dict, db, esp_provider) -> str:
-    # Guarantees exact-once broadcast delivery, preventing duplicate push alerts on server restarts
-    date_stamp = time.strftime("%Y_%m_%d")
-    raw_key = f"{campaign_id}:{user_id}:{date_stamp}"
-    idempotency_key = hashlib.sha256(raw_key.encode("utf-8")).hexdigest()
-    
-    # 1. Check sub-5ms Redis cache state
-    existing = db.get_idempotency_state(idempotency_key)
-    if existing and existing.get("status") == "DISPATCHED":
-        return "SKIPPED_DUPLICATE_PREVENTED"
-        
-    db.set_idempotency_state(idempotency_key, status="PENDING", ttl_seconds=86400)
-    success = esp_provider.send_push(user_id=user_id, payload=payload)
-    status = "DISPATCHED" if success else "FAILED"
-    db.set_idempotency_state(idempotency_key, status=status, ttl_seconds=86400)
-    return status
-""", language="python")
-
-    with code_tab4:
-        st.markdown("##### 🤖 Autonomous Journey Agent (AJA) with Multi-Tier Policy Guardrails")
-        st.markdown("""
-<p style="font-size:0.86rem; color:#475569; line-height:1.5; margin-bottom:14px;">
-Moving beyond static A/B testing into <strong>dynamic in-flight personalization</strong>: An autonomous reasoning agent analyzes real-time customer behavior, selects the optimal psychological angle, and crafts 1:1 personalized copy &mdash; validated by a <strong>deterministic multi-tier compliance guardrail</strong>.
-</p>
-""", unsafe_allow_html=True)
-
-        st.markdown("""
-<div style="background:#f1f5f9; border:1px solid #cbd5e1; border-radius:10px; padding:1.2rem; margin-bottom:1.4rem;">
-<div style="font-size:0.75rem; color:#475569; font-weight:800; text-transform:uppercase; margin-bottom:8px;">📐 Autonomous Agent Execution Pipeline</div>
-<div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap;">
-  <div style="background:#ffffff; border:1px solid #cbd5e1; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:120px;">
-    <div style="font-size:0.68rem; color:#64748b; font-weight:700;">1. INGESTION</div>
-    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Customer Context</div>
-    <div style="font-size:0.65rem; color:#0284c7;">Events & Behavior</div>
-  </div>
-  <div style="color:#94a3b8; font-weight:bold;">&rarr;</div>
-  <div style="background:#ffffff; border:1.5px solid #8b5cf6; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:125px;">
-    <div style="font-size:0.68rem; color:#7c3aed; font-weight:700;">2. REASONING</div>
-    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Journey Agent</div>
-    <div style="font-size:0.65rem; color:#64748b;">Strategy Synthesis</div>
-  </div>
-  <div style="color:#94a3b8; font-weight:bold;">&rarr;</div>
-  <div style="background:#ffffff; border:1.5px solid #059669; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:130px;">
-    <div style="font-size:0.68rem; color:#059669; font-weight:700;">3. GUARDRAILS</div>
-    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Policy Audit</div>
-    <div style="font-size:0.65rem; color:#16a34a;">Zero Risk Tolerance</div>
-  </div>
-  <div style="color:#94a3b8; font-weight:bold;">&rarr;</div>
-  <div style="background:#ffffff; border:1px solid #0284c7; border-radius:6px; padding:8px 10px; text-align:center; flex:1; min-width:120px;">
-    <div style="font-size:0.68rem; color:#0284c7; font-weight:700;">4. DISPATCH</div>
-    <div style="font-size:0.78rem; font-weight:800; color:#0f172a;">Exact-Once Send</div>
-    <div style="font-size:0.65rem; color:#0284c7;">Push / In-App / SMS</div>
-  </div>
-</div>
-</div>
-""", unsafe_allow_html=True)
-
-        st.markdown("###### 🔬 Interactive Multi-Industry Autonomous Agent Simulator")
-        
-        sim_profile = st.selectbox(
-            "Select Customer Behavioral Scenario:",
-            [
-                "🪙 FinTech Persona: Max (Holding €3,500 Idle ETH for 40+ Days)",
-                "👗 Fashion VIP Persona: Elena (2 Unused VIP Credits on the 4th of Month)",
-                "🥦 Food & Meal-Kit Persona: David (Cancelled 18 Days Ago due to 'Time Constraints')"
-            ]
-        )
-        
-        if "Max" in sim_profile:
-            agent_reasoning = "Customer holds substantial idle Proof-of-Stake assets but hasn't activated staking. Angle: Emphasize institutional custody security and calculate exact EUR annualized passive rewards without making speculative profit guarantees."
-            guardrail_checks = [
-                ("Regulatory Compliance", "PASS: No guaranteed returns or speculative wording detected.", "#16a34a"),
-                ("Brand Identity", "PASS: Professional, institutional wealth-building tone maintained.", "#16a34a"),
-                ("Latency SLA (<400ms)", "PASS: LLM generation completed in 218ms (Circuit breaker normal).", "#16a34a")
-            ]
-            msg_tag = "AUTONOMOUS FINTECH STAKING NUDGE"
-            msg_headline = "Put your €3,500 Ethereum to work with German Custody 🪙"
-            msg_body = "Hi Max, your ETH balance has been in custody for 40 days. Staking delegation allows you to earn up to +€119.00/year (~€9.90/mo) in weekly network rewards with 100% German institutional oversight."
-            msg_cta = "Explore Regulated Staking &rarr;"
-            msg_badge_bg = "#eff6ff"
-            msg_badge_text = "#0284c7"
-            
-        elif "Elena" in sim_profile:
-            agent_reasoning = "VIP member has 2 accumulated credits and the monthly decision window ends tomorrow (5th). Angle: Prevent surprise billing dissatisfaction by showcasing newly dropped activewear matching her preferred size."
-            guardrail_checks = [
-                ("Credit Transparency", "PASS: Explicitly clarifies 1-click option to shop or skip by the 5th.", "#16a34a"),
-                ("Personalization Accuracy", "PASS: Matched against recent high-waisted legging preferences.", "#16a34a"),
-                ("Latency SLA (<400ms)", "PASS: LLM generation completed in 184ms (Circuit breaker normal).", "#16a34a")
-            ]
-            msg_tag = "AUTONOMOUS VIP CREDIT RESCUE"
-            msg_headline = "Elena, your 2 VIP Member Credits are ready for today's drop ✨"
-            msg_body = "Our new Seamless Flow collection just dropped in your favorite fit. Use your 2 member credits today to claim your 2-piece set, or easily skip this month in 1 tap before midnight on the 5th."
-            msg_cta = "Shop New Drops with Credit &rarr;"
-            msg_badge_bg = "#fdf2f8"
-            msg_badge_text = "#db2777"
-            
-        elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
+elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
     st.markdown("""
 <div style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); border: 1px solid #4338ca; border-radius: 12px; padding: 1.5rem 1.8rem; color: #ffffff; margin-bottom: 1.4rem; box-shadow: 0 8px 20px rgba(0,0,0,0.18);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 6px;">
@@ -661,6 +480,9 @@ The paradigm shift from static A/B testing to <strong>dynamic in-flight reasonin
 
     st.success("🎯 **Strategic Impact:** Eliminates static copy bottlenecks by allowing an autonomous agent to tailor messaging dynamically per customer, while strict deterministic guardrails ensure 100% brand and regulatory compliance.")
 
+# ==============================================================================
+# SECTION 5: ENTERPRISE MARTECH LAB & SQL CODE
+# ==============================================================================
 else:
     st.markdown("""
 <div style="background:#f8fafc; border:1px solid #e2e8f0; border-top:4px solid #7c3aed; border-radius:10px; padding:1.2rem; margin-bottom:1.2rem;">
@@ -762,7 +584,6 @@ def dispatch_with_idempotency(campaign_id: str, user_id: str, payload: dict, db,
     db.set_idempotency_state(idempotency_key, status=status, ttl_seconds=86400)
     return status
 """, language="python")
-
 
 # Footer
 st.markdown("---")
