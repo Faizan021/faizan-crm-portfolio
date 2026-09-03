@@ -1,7 +1,7 @@
 # 📊 CRM Strategy & Lifecycle Marketing Growth Portfolio
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Live%20Production-059669?style=for-the-badge&logo=streamlit" alt="Status" />
+  <a href="https://faizan-crm-portfolio.streamlit.app"><img src="https://img.shields.io/badge/Status-Live%20Production%20App-059669?style=for-the-badge&logo=streamlit" alt="Status" /></a>
   <img src="https://img.shields.io/badge/Stack-Python%20%7C%20Braze%20%7C%20Snowflake%20%7C%20Redis-0284c7?style=for-the-badge" alt="Stack" />
   <img src="https://img.shields.io/badge/Focus-Lifecycle%20%7C%20Retention%20%7C%20AI%20Agents-7c3aed?style=for-the-badge" alt="Focus" />
 </p>
@@ -12,28 +12,57 @@
 </p>
 
 <p align="center">
-  👉 <a href="https://faizan-crm-portfolio.streamlit.app"><strong>🌐 Explore the Live Interactive Web Application &rarr;</strong></a>
+  <a href="https://faizan-crm-portfolio.streamlit.app">
+    <img src="https://img.shields.io/badge/👉%20Click%20Here%20to%20Open-Live%20Interactive%20Web%20Application-2563eb?style=for-the-badge" alt="Live App" />
+  </a>
 </p>
 
 ---
 
 ## 🏛️ Executive Portfolio Architecture
 
-```mermaid
-graph TD
-    Hub["👔 <b>FAIZAN AHMED — CRM & LIFECYCLE PORTFOLIO</b><br/><i>Data-Driven Growth Engines across 4 Core Verticals</i>"]
-    
-    Hub --> V1["🪙 <b>1. Crypto & Regulated FinTech</b><br/>• BaFin KYC Recovery (+38.7%)<br/>• DCA Sparplan Habit (59.2% Ret)<br/>• Staking Yield Nudge (+3.4x CVR)<br/>• 24h Capped Volatility Push"]
-    Hub --> V2["👗 <b>2. Fashion & DTC VIP Loyalty</b><br/>• 1st–5th Skip/Shop Loop (+31.4%)<br/>• 2h Early VIP Drop Alerts (18.2%)<br/>• Unspent Credit Rescue (-42%)<br/>• VIP Cohort LTV Expansion"]
-    Hub --> V3["🥦 <b>3. Food & Meal-Kit Reactivations</b><br/>• Cancelled Win-Back (+15.2%)<br/>• 30/60/90 Dormancy Tiers (+9.4%)<br/>• Save-the-Sale Rescue (14.8%)<br/>• 2nd-Order Churn Mitigation"]
-    Hub --> V4["🤖 <b>4. 2026 AI Agentic CRM</b><br/>• Autonomous In-Flight Copy<br/>• Real-Time Behavioral Reasoning<br/>• Multi-Tier Policy Guardrails<br/>• &lt;400ms Circuit Breakers"]
-
-    style Hub fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff
-    style V1 fill:#082f49,stroke:#0284c7,stroke-width:2px,color:#ffffff
-    style V2 fill:#4c0519,stroke:#db2777,stroke-width:2px,color:#ffffff
-    style V3 fill:#052e16,stroke:#16a34a,stroke-width:2px,color:#ffffff
-    style V4 fill:#2e1065,stroke:#8b5cf6,stroke-width:2px,color:#ffffff
-```
+<table>
+  <tr>
+    <td width="50%" valign="top" style="background:#f8fafc;">
+      <h3>🪙 1. Crypto & Regulated FinTech</h3>
+      <ul>
+        <li><strong>BaFin KYC Recovery:</strong> <code>+38.7%</code> Funnel Lift via automated fallback</li>
+        <li><strong>Automated DCA Sparplans:</strong> <code>59.2%</code> 12-Month Retention (2.6x industry avg)</li>
+        <li><strong>Staking Yield Nudge:</strong> <code>+3.4x</code> Cross-Sell Adoption via concrete EUR yields</li>
+        <li><strong>Event-Driven Volatility Push:</strong> <code>+44.1%</code> Volume with strict 24h frequency cap</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top" style="background:#f8fafc;">
+      <h3>👗 2. Fashion & DTC VIP Membership</h3>
+      <ul>
+        <li><strong>1st–5th "Skip the Month" Loop:</strong> <code>+31.4%</code> VIP Conversion Rate</li>
+        <li><strong>Drop-Day VIP Early Access:</strong> <code>18.2%</code> Checkout Conversion in 2 hours</li>
+        <li><strong>Unspent Credit Rescue:</strong> <code>-42.0%</code> Reduction in Credit Decay</li>
+        <li><strong>VIP Cohort Expansion:</strong> <code>+28.5%</code> Annual Customer LTV Lift</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" style="background:#f8fafc;">
+      <h3>🥦 3. Food & Meal-Kit Reactivations</h3>
+      <ul>
+        <li><strong>Cancelled Subscriber Win-Back:</strong> <code>+15.2%</code> Reactivation Rate</li>
+        <li><strong>30/60/90-Day Dormancy Tiering:</strong> <code>+9.4%</code> Renewal Engagement Uplift</li>
+        <li><strong>Save-the-Sale Cancellation Flow:</strong> <code>14.8%</code> Immediate Churn Rescue</li>
+        <li><strong>Second-Order Churn Mitigation:</strong> <code>-34.8%</code> Post-Reactivation Drop</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top" style="background:#f8fafc;">
+      <h3>🤖 4. 2026 AI Agentic CRM</h3>
+      <ul>
+        <li><strong>Autonomous In-Flight Copy:</strong> 1:1 Dynamic personalization per session</li>
+        <li><strong>Multi-Tier Policy Guardrails:</strong> <code>0.00%</code> Compliance / Hallucination risk</li>
+        <li><strong>Low-Latency SLA:</strong> <code>&lt;400ms</code> Automated Circuit Breakers</li>
+        <li><strong>Multi-Industry Simulator:</strong> Live autonomous reasoning & policy logs</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -78,17 +107,19 @@ Maximizing Customer Lifetime Value (CLV) from cancelled subscriber cohorts throu
 ### 4. 🤖 2026 AI Agentic CRM & Autonomous Journeys *(Innovation Showcase)*
 The paradigm shift from static A/B copy variants to **dynamic in-flight reasoning**: An autonomous AI agent analyzes live customer context, selects the optimal psychological angle, and generates 1:1 individualized messaging &mdash; constrained by **deterministic compliance filters and <400ms SLA circuit breakers**.
 
-```mermaid
-flowchart LR
-    A["📥 <b>1. INGESTION</b><br/>Live Kafka Stream<br/>Customer Context"] --> B["🧠 <b>2. REASONING</b><br/>Autonomous Agent<br/>1:1 Strategy Synthesis"]
-    B --> C["🛡️ <b>3. GUARDRAILS</b><br/>Policy & Compliance<br/>Zero Risk Tolerance"]
-    C --> D["⚡ <b>4. DISPATCH</b><br/>Exact-Once Send<br/>Push / In-App / SMS"]
-    
-    style A fill:#0f172a,stroke:#0284c7,stroke-width:2px,color:#ffffff
-    style B fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#ffffff
-    style C fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ffffff
-    style D fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#ffffff
-```
+#### 📐 Autonomous Agent Execution Pipeline
+
+<table>
+  <tr>
+    <td align="center" width="25%"><strong>1. INGESTION</strong><br>📥 Live Kafka Event Stream<br><em>Customer Context & Activity</em></td>
+    <td align="center" width="5%">&rarr;</td>
+    <td align="center" width="25%"><strong>2. REASONING</strong><br>🧠 Autonomous Agent<br><em>1:1 Strategy & Angle Synthesis</em></td>
+    <td align="center" width="5%">&rarr;</td>
+    <td align="center" width="25%"><strong>3. GUARDRAILS</strong><br>🛡️ Policy & Compliance Audit<br><em>Zero Risk / &lt;400ms SLA</em></td>
+    <td align="center" width="5%">&rarr;</td>
+    <td align="center" width="25%"><strong>4. DISPATCH</strong><br>⚡ Exact-Once Send<br><em>Push / In-App / SMS</em></td>
+  </tr>
+</table>
 
 * **Zero Hallucination Guarantee:** Multi-tier deterministic guardrail validates regulatory policy, brand voice, and latency SLA before dispatch.
 * **Multi-Industry Simulator:** Interactive live testing for FinTech staking, Fashion credit rescue, and Food win-backs.
