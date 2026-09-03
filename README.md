@@ -12,25 +12,27 @@
 </p>
 
 <p align="center">
-  👉 <a href="https://faizan-crm-portfolio.streamlit.app"><strong>Explore the Live Interactive Web Application &rarr;</strong></a>
+  👉 <a href="https://faizan-crm-portfolio.streamlit.app"><strong>🌐 Explore the Live Interactive Web Application &rarr;</strong></a>
 </p>
 
 ---
 
-## 🏛️ Executive Portfolio Overview
+## 🏛️ Executive Portfolio Architecture
 
-This repository houses a production-grade, interactive Lifecycle Marketing & Growth Engine. It models real-world customer acquisition, engagement, habit formation, and win-back loops across multi-million user ecosystems.
+```mermaid
+graph TD
+    Hub["👔 <b>FAIZAN AHMED — CRM & LIFECYCLE PORTFOLIO</b><br/><i>Data-Driven Growth Engines across 4 Core Verticals</i>"]
+    
+    Hub --> V1["🪙 <b>1. Crypto & Regulated FinTech</b><br/>• BaFin KYC Recovery (+38.7%)<br/>• DCA Sparplan Habit (59.2% Ret)<br/>• Staking Yield Nudge (+3.4x CVR)<br/>• 24h Capped Volatility Push"]
+    Hub --> V2["👗 <b>2. Fashion & DTC VIP Loyalty</b><br/>• 1st–5th Skip/Shop Loop (+31.4%)<br/>• 2h Early VIP Drop Alerts (18.2%)<br/>• Unspent Credit Rescue (-42%)<br/>• VIP Cohort LTV Expansion"]
+    Hub --> V3["🥦 <b>3. Food & Meal-Kit Reactivations</b><br/>• Cancelled Win-Back (+15.2%)<br/>• 30/60/90 Dormancy Tiers (+9.4%)<br/>• Save-the-Sale Rescue (14.8%)<br/>• 2nd-Order Churn Mitigation"]
+    Hub --> V4["🤖 <b>4. 2026 AI Agentic CRM</b><br/>• Autonomous In-Flight Copy<br/>• Real-Time Behavioral Reasoning<br/>• Multi-Tier Policy Guardrails<br/>• &lt;400ms Circuit Breakers"]
 
-```
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│  👔 FAIZAN AHMED — CRM Strategy & Lifecycle Marketing Portfolio                        │
-│  "Enterprise Proof-of-Work: Multi-Channel Lifecycle Automation & 2026 Agentic AI"       │
-└────────────────────────────────────────────────────────────────────────────────────────┘
-
-   ┌───────────────────────┬───────────────────────┬───────────────────────┬───────────────────────┐
-   │ 🪙 Crypto & FinTech   │ 👗 Fashion & DTC VIP  │ 🥦 Food & Meal-Kit    │ 🤖 2026 AI Agentic    │
-   │ WealthTech Growth     │ Membership Loyalty    │ Subscription Win-Back │ CRM & Guardrails      │
-   └───────────────────────┴───────────────────────┴───────────────────────┴───────────────────────┘
+    style Hub fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#ffffff
+    style V1 fill:#082f49,stroke:#0284c7,stroke-width:2px,color:#ffffff
+    style V2 fill:#4c0519,stroke:#db2777,stroke-width:2px,color:#ffffff
+    style V3 fill:#052e16,stroke:#16a34a,stroke-width:2px,color:#ffffff
+    style V4 fill:#2e1065,stroke:#8b5cf6,stroke-width:2px,color:#ffffff
 ```
 
 ---
@@ -76,12 +78,16 @@ Maximizing Customer Lifetime Value (CLV) from cancelled subscriber cohorts throu
 ### 4. 🤖 2026 AI Agentic CRM & Autonomous Journeys *(Innovation Showcase)*
 The paradigm shift from static A/B copy variants to **dynamic in-flight reasoning**: An autonomous AI agent analyzes live customer context, selects the optimal psychological angle, and generates 1:1 individualized messaging &mdash; constrained by **deterministic compliance filters and <400ms SLA circuit breakers**.
 
-```
-┌─────────────────────────┐     ┌─────────────────────────┐     ┌─────────────────────────┐     ┌─────────────────────────┐
-│ 1. INGESTION            │ ──> │ 2. REASONING            │ ──> │ 3. GUARDRAILS           │ ──> │ 4. DISPATCH             │
-│ Live Context & History  │     │ Autonomous Agent Step   │     │ Multi-Tier Policy Audit │     │ Exact-Once Delivery     │
-│ Kafka Event Stream      │     │ Psychological Angle     │     │ Zero Risk Tolerance     │     │ Push / In-App / SMS     │
-└─────────────────────────┘     └─────────────────────────┘     └─────────────────────────┘     └─────────────────────────┘
+```mermaid
+flowchart LR
+    A["📥 <b>1. INGESTION</b><br/>Live Kafka Stream<br/>Customer Context"] --> B["🧠 <b>2. REASONING</b><br/>Autonomous Agent<br/>1:1 Strategy Synthesis"]
+    B --> C["🛡️ <b>3. GUARDRAILS</b><br/>Policy & Compliance<br/>Zero Risk Tolerance"]
+    C --> D["⚡ <b>4. DISPATCH</b><br/>Exact-Once Send<br/>Push / In-App / SMS"]
+    
+    style A fill:#0f172a,stroke:#0284c7,stroke-width:2px,color:#ffffff
+    style B fill:#1e1b4b,stroke:#8b5cf6,stroke-width:2px,color:#ffffff
+    style C fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#ffffff
+    style D fill:#1e293b,stroke:#38bdf8,stroke-width:2px,color:#ffffff
 ```
 
 * **Zero Hallucination Guarantee:** Multi-tier deterministic guardrail validates regulatory policy, brand voice, and latency SLA before dispatch.
