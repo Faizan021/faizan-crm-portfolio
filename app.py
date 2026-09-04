@@ -341,14 +341,32 @@ elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
   <span style="background:rgba(168,85,247,0.25); color:#c084fc; border:1px solid #9333ea; padding:3px 10px; border-radius:4px; font-size:0.75rem; font-weight:800; letter-spacing:0.04em;">
     🔥 2026 MARTECH INNOVATION SHOWCASE
   </span>
-  <span style="font-size:0.75rem; color:#cbd5e1; font-weight:600;">Autonomous Agent Step & Compliance Guardrails</span>
+  <span style="font-size:0.75rem; color:#cbd5e1; font-weight:600;">Agentic CRM in Plain English</span>
 </div>
-<div style="font-size:1.6rem; font-weight:800; color:#ffffff; margin-bottom:0.3rem;">
-  🤖 Autonomous Journey Agents (AJA) & Multi-Tier Policy Guardrails
+<div style="font-size:1.6rem; font-weight:800; color:#ffffff; margin-bottom:0.4rem;">
+  🤖 Autonomous Journey Agents & Safety Guardrails
 </div>
-<p style="font-size:0.9rem; color:#e2e8f0; line-height:1.55; margin:0;">
-The paradigm shift from static A/B testing to <strong>dynamic in-flight reasoning</strong>: Deploying autonomous AI agents inside live customer journeys to craft 1:1 individualized messaging &mdash; constrained by <strong>deterministic compliance filters and &lt;400ms SLA circuit breakers</strong>.
+<p style="font-size:0.92rem; color:#e2e8f0; line-height:1.55; margin:0;">
+<strong>In Simple Words:</strong> Instead of marketers writing 3 generic copy variants, an AI Agent sits directly inside the customer journey like a real-time brain. When a user acts, the AI creates a 100% unique message tailored to their exact situation &mdash; protected by <strong>strict safety guardrails and sub-400ms speed backups</strong> so it never hallucinates or breaks compliance.
 </p>
+</div>
+""", unsafe_allow_html=True)
+
+    # 3 Simple Rules Cards
+    st.markdown("""
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:12px; margin-bottom:1.4rem;">
+  <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #10b981; border-radius:8px; padding:12px 14px;">
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a; margin-bottom:3px;">🛡️ 1. Safety First (Guardrails)</div>
+    <div style="font-size:0.75rem; color:#475569; line-height:1.4;">No human checks messages before send. The AI has strict negative rules: never promise guaranteed profits, never mention competitors, stay within 120 chars.</div>
+  </div>
+  <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #8b5cf6; border-radius:8px; padding:12px 14px;">
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a; margin-bottom:3px;">💰 2. Unit Economics (ROI)</div>
+    <div style="font-size:0.75rem; color:#475569; line-height:1.4;">Running AI on every push costs API credits. The extra sales must exceed the AI cost at scale (Break-Even Incremental Uplift).</div>
+  </div>
+  <div style="background:#ffffff; border:1px solid #e2e8f0; border-left:4px solid #0284c7; border-radius:8px; padding:12px 14px;">
+    <div style="font-size:0.78rem; font-weight:800; color:#0f172a; margin-bottom:3px;">⚡ 3. Fallback Plan (&lt;400ms SLA)</div>
+    <div style="font-size:0.75rem; color:#475569; line-height:1.4;">If the AI takes longer than 400ms or fails a safety test, the system instantly switches to a reliable standard template with 0 downtime.</div>
+  </div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -478,7 +496,7 @@ The paradigm shift from static A/B testing to <strong>dynamic in-flight reasonin
 </div>
 """, unsafe_allow_html=True)
 
-    st.success("🎯 **Strategic Impact:** Eliminates static copy bottlenecks by allowing an autonomous agent to tailor messaging dynamically per customer, while strict deterministic guardrails ensure 100% brand and regulatory compliance.")
+    st.success("🎯 **Key Takeaway:** The hard part of Agentic CRM is not generating copy—it is setting the right boundaries. When guardrails, cost controls, and instant fallbacks are locked in, AI safely drives higher conversion for each individual customer.")
 
 # ==============================================================================
 # SECTION 5: ENTERPRISE MARTECH LAB & SQL CODE
