@@ -429,58 +429,82 @@ elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
 </div>
 """, unsafe_allow_html=True)
 
-    st.markdown("##### 🔬 Interactive Multi-Industry Autonomous Agent Simulator")
+    st.markdown("##### 🔬 Interactive Live AI Simulator: Choose an Industry Environment")
+    st.caption("See how the same AI Agent adapts its thinking, safety rules, and message copy depending on the company's business model:")
     
     sim_profile = st.selectbox(
-        "Select Customer Behavioral Scenario to Test Autonomous Generation:",
+        "Select Industry Environment to Test:",
         [
-            "🪙 FinTech Persona: Max (Holding €3,500 Idle ETH for 40+ Days)",
-            "👗 Fashion VIP Persona: Elena (2 Unused VIP Credits on the 4th of Month)",
-            "🥦 Food & Meal-Kit Persona: David (Cancelled 18 Days Ago due to 'Time Constraints')"
+            "🪙 1. FinTech & Crypto Environment (e.g. Boerse Stuttgart / BISON)",
+            "🥦 2. Food & Meal-Kit Subscription Environment (e.g. HelloFresh)",
+            "🚗 3. Learning & Training School Environment (e.g. Ornikar / Babbel)",
+            "👗 4. Fashion & DTC VIP Membership Environment (e.g. Fabletics)"
         ]
     )
     
-    if "Max" in sim_profile:
-        agent_reasoning = "Customer holds substantial idle Proof-of-Stake assets but hasn't activated staking. Strategy: Emphasize institutional custody security and calculate exact EUR annualized passive rewards without making speculative profit guarantees."
+    if "1. FinTech" in sim_profile:
+        scenario_who = "Max (Customer with €3,500 idle Ethereum in custody for 40 days)"
+        old_way = "Old Generic Way: 'Earn rewards on crypto! Start staking today.' (Generic broadcast, easily ignored)"
+        agent_reasoning = "The AI notices Max has un-staked ETH. Instead of shouting generic hype, it calculates his exact yearly cash reward and emphasizes German custody security so he feels safe."
         guardrail_checks = [
-            ("Regulatory Compliance", "PASS: No guaranteed returns or speculative wording detected.", "#16a34a"),
-            ("Brand Identity", "PASS: Professional, institutional wealth-building tone maintained.", "#16a34a"),
-            ("Latency SLA (<400ms)", "PASS: LLM generation completed in 218ms (Circuit breaker normal).", "#16a34a")
+            ("Safety Rule (BaFin)", "PASSED: Zero guaranteed profits or speculative wording allowed.", "#16a34a"),
+            ("Brand Tone", "PASSED: Serious, calm institutional tone (German exchange standard).", "#16a34a"),
+            ("Speed Check", "PASSED: 218 ms (Sub-400ms SLA met).", "#16a34a")
         ]
-        msg_tag = "AUTONOMOUS FINTECH STAKING NUDGE"
+        msg_tag = "FINTECH STAKING SIMULATION"
         msg_headline = "Put your €3,500 Ethereum to work with German Custody 🪙"
         msg_body = "Hi Max, your ETH balance has been in custody for 40 days. Staking delegation allows you to earn up to +€119.00/year (~€9.90/mo) in weekly network rewards with 100% German institutional oversight."
         msg_cta = "Explore Regulated Staking &rarr;"
         msg_badge_bg = "#eff6ff"
         msg_badge_text = "#0284c7"
         
-    elif "Elena" in sim_profile:
-        agent_reasoning = "VIP member has 2 accumulated credits and the monthly decision window ends tomorrow (5th). Strategy: Prevent surprise billing dissatisfaction by showcasing newly dropped activewear matching her preferred size."
+    elif "2. Food" in sim_profile:
+        scenario_who = "David (Cancelled his box 18 days ago citing 'Too busy / No time to cook')"
+        old_way = "Old Generic Way: 'We miss you! Take 20% off your next box.' (Fails because money wasn't his problem!)"
+        agent_reasoning = "The AI reads his cancellation reason ('No time'). A discount won't bring him back—solving his time problem will! So the AI specifically highlights the new '15-Minute Express' recipe line."
         guardrail_checks = [
-            ("Credit Transparency", "PASS: Explicitly clarifies 1-click option to shop or skip by the 5th.", "#16a34a"),
-            ("Personalization Accuracy", "PASS: Matched against recent high-waisted legging preferences.", "#16a34a"),
-            ("Latency SLA (<400ms)", "PASS: LLM generation completed in 184ms (Circuit breaker normal).", "#16a34a")
+            ("Root Cause Match", "PASSED: Solves time friction instead of sending random discounts.", "#16a34a"),
+            ("Margin Guardrail", "PASSED: €20 incentive is within approved tier-1 reactivation budget.", "#16a34a"),
+            ("Speed Check", "PASSED: 196 ms (Sub-400ms SLA met).", "#16a34a")
         ]
-        msg_tag = "AUTONOMOUS VIP CREDIT RESCUE"
-        msg_headline = "Elena, your 2 VIP Member Credits are ready for today's drop ✨"
-        msg_body = "Our new Seamless Flow collection just dropped in your favorite fit. Use your 2 member credits today to claim your 2-piece set, or easily skip this month in 1 tap before midnight on the 5th."
-        msg_cta = "Shop New Drops with Credit &rarr;"
-        msg_badge_bg = "#fdf2f8"
-        msg_badge_text = "#db2777"
-        
-    else:
-        agent_reasoning = "User churned citing lack of cooking time. Generic discounts won't solve time friction. Strategy: Highlight the brand-new '15-Minute Chef Express' menu collection with an easy 1-click unpause incentive."
-        guardrail_checks = [
-            ("Churn Reason Alignment", "PASS: Directly addresses 'Time Constraints' with 15-min recipes.", "#16a34a"),
-            ("Incentive Threshold", "PASS: Discount within approved margin guardrail (Tier 1 reactivation).", "#16a34a"),
-            ("Latency SLA (<400ms)", "PASS: LLM generation completed in 196ms (Circuit breaker normal).", "#16a34a")
-        ]
-        msg_tag = "AUTONOMOUS SUBSCRIBER WIN-BACK"
+        msg_tag = "FOOD SUBSCRIPTION WIN-BACK SIMULATION"
         msg_headline = "Short on time, David? Try our new 15-Minute Express Dinners 🥦"
         msg_body = "We've added 12 new ultra-fast chef recipes designed for busy weeknights. Unpause your delivery this week and enjoy €20 off your first 2 quick-prep boxes."
         msg_cta = "Explore 15-Min Menu & Unpause &rarr;"
         msg_badge_bg = "#f0fdf4"
         msg_badge_text = "#16a34a"
+        
+    elif "3. Learning" in sim_profile:
+        scenario_who = "Sarah (Student driver who hasn't booked a lesson in 15 days, but is 2 hours away from exam readiness)"
+        old_way = "Old Generic Way: 'Book your driving lesson today!' (Generic reminder, easily ignored)"
+        agent_reasoning = "The AI checks her driving hours (28 completed out of 30 recommended). She isn't a beginner—she is right at the finish line! The AI uses positive encouragement to help her book her final test-prep."
+        guardrail_checks = [
+            ("Student Context", "PASSED: Accurately identifies she is near the finish line (28/30 hrs).", "#16a34a"),
+            ("Safety Rule", "PASSED: No guarantee of passing exam, only factual practice reminder.", "#16a34a"),
+            ("Speed Check", "PASSED: 182 ms (Sub-400ms SLA met).", "#16a34a")
+        ]
+        msg_tag = "LEARNING & TRAINING ENGAGEMENT SIMULATION"
+        msg_headline = "Sarah, you are only 2 hours away from your driving exam! 🚗"
+        msg_body = "You've already completed 28 practice hours and your instructor says you're almost test-ready. Book your final 2 practice hours this week so you can schedule your exam."
+        msg_cta = "Book Your Final Lesson &rarr;"
+        msg_badge_bg = "#fef3c7"
+        msg_badge_text = "#b45309"
+        
+    else: # Fashion
+        scenario_who = "Elena (VIP Member with 2 accumulated credits, tomorrow is the 5th of the month)"
+        old_way = "Old Generic Way: 'Shop the new collection!' (Doesn't mention her credits or the deadline)"
+        agent_reasoning = "Elena has 2 unused credits. If she gets charged again tomorrow, she might get angry and cancel. The AI transparently reminds her to either use her credits on her favorite size or skip in 1 tap."
+        guardrail_checks = [
+            ("Transparency Rule", "PASSED: Clearly tells her she can skip before midnight with zero fee.", "#16a34a"),
+            ("Size Preference", "PASSED: Matches activewear collection to her saved fit preference.", "#16a34a"),
+            ("Speed Check", "PASSED: 184 ms (Sub-400ms SLA met).", "#16a34a")
+        ]
+        msg_tag = "FASHION VIP CREDIT RETENTION SIMULATION"
+        msg_headline = "Elena, your 2 VIP Member Credits are ready for today's drop ✨"
+        msg_body = "Our new Seamless Flow collection just dropped in your favorite fit. Use your 2 member credits today to claim your 2-piece set, or easily skip this month in 1 tap before midnight on the 5th."
+        msg_cta = "Shop New Drops with Credit &rarr;"
+        msg_badge_bg = "#fdf2f8"
+        msg_badge_text = "#db2777"
 
     col_agent_sim, col_agent_log = st.columns([1.2, 1])
     
@@ -489,9 +513,16 @@ elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
 <div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #7c3aed; border-radius:10px; padding:1.2rem; box-shadow:0 4px 12px rgba(0,0,0,0.06);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
   <span style="background:{msg_badge_bg}; color:{msg_badge_text}; font-size:0.72rem; font-weight:800; padding:3px 8px; border-radius:4px;">{msg_tag}</span>
-  <span style="font-size:0.7rem; color:#64748b; font-weight:600;">Autonomous 1:1 Generation</span>
+  <span style="font-size:0.7rem; color:#64748b; font-weight:600;">Live AI Output</span>
 </div>
-<div style="font-size:1rem; font-weight:800; color:#0f172a; margin-bottom:6px;">{msg_headline}</div>
+
+<div style="background:#f1f5f9; border-radius:6px; padding:8px 10px; font-size:0.75rem; color:#475569; margin-bottom:10px; line-height:1.4;">
+  👤 <strong>Customer:</strong> {scenario_who}<br>
+  ❌ <em>{old_way}</em>
+</div>
+
+<div style="font-size:0.75rem; font-weight:800; color:#16a34a; margin-bottom:3px;">✅ NEW AI-GENERATED 1:1 MESSAGE:</div>
+<div style="font-size:0.98rem; font-weight:800; color:#0f172a; margin-bottom:6px;">{msg_headline}</div>
 <p style="font-size:0.84rem; color:#334155; line-height:1.45; margin:0 0 12px 0;">{msg_body}</p>
 <div style="background:#7c3aed; color:#ffffff; font-weight:700; font-size:0.84rem; padding:8px 16px; border-radius:6px; display:inline-block;">
 {msg_cta}
