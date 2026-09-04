@@ -177,19 +177,23 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
                 st.image("assets/braze_step2_conversion.png", caption="2. Assign Conversion Event: 3-Day Deadline for Verification", use_container_width=True)
 
         elif "2. Action-Based" in c_step:
-            st.markdown("##### ⚡ Step 2: Action-Based Triggering & Volume Safety Controls")
+            st.markdown("##### ⚡ Step 2: Action-Based Triggers, Entry Volume Caps & Exit Criteria")
             st.markdown("""
-            - **Trigger Type:** **Action-Based**. When a user registers but drops off at the ID step, they enter the Canvas in real-time.
-            - **Entry Controls:** Re-entry is disabled (users only onboard once). Volume is capped at **500,000 max entries** to protect customer support from surge inquiries.
-            - **User QA Lookup:** We verify test profiles using User Lookup before going live.
+            - **Action-Based Trigger:** Enters in real-time when custom event `kyc_step_dropped` occurs.
+            - **Entry Volume Controls:** Re-entry is disabled (onboarding runs once). Volume capped at **500,000 max entries** to protect IDnow video operators.
+            - **Exit Criteria (Exception Events):** When a user triggers `kyc_verification_completed` or `first_trade_executed`, Braze **immediately ejects them from the Canvas**, suppressing all scheduled downstream reminder pushes.
             """)
-            col_s3, col_s4, col_s5 = st.columns(3)
+            col_s3, col_s4 = st.columns(2)
             with col_s3:
-                st.image("assets/braze_step3_entry_schedule.png", caption="Action-Based Triggering on Custom Event", use_container_width=True)
+                st.image("assets/braze_step3_entry_schedule.png", caption="1. Action-Based Trigger on kyc_step_dropped Event", use_container_width=True)
             with col_s4:
-                st.image("assets/braze_step5_entry_controls.png", caption="Entry Controls & Max Volume Guardrail", use_container_width=True)
+                st.image("assets/braze_step5_exit_criteria.png", caption="2. Exit Criteria: Immediate Ejection on kyc_verification_completed", use_container_width=True)
+            
+            col_s5, col_s6 = st.columns(2)
             with col_s5:
-                st.image("assets/braze_step4_user_lookup.png", caption="QA Check via User ID Lookup", use_container_width=True)
+                st.image("assets/braze_step5_entry_controls.png", caption="3. Entry Controls & 500,000 Volume Cap", use_container_width=True)
+            with col_s6:
+                st.image("assets/braze_step4_user_lookup.png", caption="4. QA Verification via User ID Lookup", use_container_width=True)
 
         elif "3. German Quiet Hours" in c_step:
             st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Channel Reachability")
