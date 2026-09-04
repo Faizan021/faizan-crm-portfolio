@@ -138,7 +138,7 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
     
     with sub_tab1:
         st.markdown("#### 🛡️ Regulated Identity Verification (KYC) Drop-Off Recovery")
-        st.markdown("**The Challenge:** In regulated German FinTech, 52% of signed-up users abandon at the Video-Ident / ID verification step due to document friction.")
+        st.markdown("**The Challenge:** In regulated German FinTech, 52% of signed-up users abandon at the Video-Ident / ID verification step due to document friction or camera drop-outs.")
         st.markdown("**The Lifecycle Solution:** A 3-step dynamic nudging engine offering automated fallback methods (eID Chip in 2 mins, Bank-Ident, or 24/7 Video-Ident) paired with institutional trust reassurance.")
         
         kyc_choice = st.selectbox("Select Drop-Off Scenario:", ["Document Blur / Camera Failure (Step 2 Drop)", "Time Constraint / Abandoned Mid-Call (Step 4 Drop)"])
@@ -146,6 +146,92 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
             st.info("📱 **In-App & Email Nudge Trigger:** 'Having camera trouble? Switch to 2-minute NFC chip scanning with your German ID card with zero human interaction.' → **+38.7% KYC Funnel Recovery**.")
         else:
             st.info("📱 **SMS & Email Nudge Trigger:** 'Your account is 90% set up. Complete your quick 2-minute verification anytime 24/7.' → **+29.4% Video-Ident Completion**.")
+
+        st.markdown("---")
+        st.markdown("### 🗺️ Live Braze Canvas Case Study: Action-Based KYC Recovery & Quiet Hours")
+        st.caption("Step-by-step visual blueprint of how this exact BISON KYC journey is engineered in Braze:")
+
+        # Canvas Steps Carousel / Expander Sections
+        c_step = st.radio(
+            "Navigate Braze Canvas Setup Steps:",
+            [
+                "1. Basics & Conversion Goal (3-Day Deadline)",
+                "2. Action-Based Trigger & Volume Limits",
+                "3. German Quiet Hours (10PM - 8AM) & Channel Reach",
+                "4. Canvas Journey Flow & Multi-Channel Dispatch",
+                "5. Holdout Group (A/B Test) & Final Analytics Scorecard"
+            ],
+            horizontal=True
+        )
+
+        if "1. Basics" in c_step:
+            st.markdown("##### 📝 Step 1: Canvas Naming & Primary Conversion Goal")
+            st.markdown("""
+            - **Canvas Name:** `BISON_KYC_Verification_Recovery_v2`
+            - **Goal:** We define a **Primary Conversion Event** (`kyc_verification_completed`) with a **3-day conversion deadline**. If a user completes their ID verification within 3 days of entering, Braze marks the journey as a verified win!
+            """)
+            col_s1, col_s2 = st.columns(2)
+            with col_s1:
+                st.image("assets/braze_step1_basics.png", caption="1. Canvas Details: Name, Description & Team Tags", use_container_width=True)
+            with col_s2:
+                st.image("assets/braze_step2_conversion.png", caption="2. Assign Conversion Event: 3-Day Deadline for Verification", use_container_width=True)
+
+        elif "2. Action-Based" in c_step:
+            st.markdown("##### ⚡ Step 2: Action-Based Triggering & Volume Safety Controls")
+            st.markdown("""
+            - **Trigger Type:** **Action-Based**. When a user registers but drops off at the ID step, they enter the Canvas in real-time.
+            - **Entry Controls:** Re-entry is disabled (users only onboard once). Volume is capped at **500,000 max entries** to protect customer support from surge inquiries.
+            - **User QA Lookup:** We verify test profiles using User Lookup before going live.
+            """)
+            col_s3, col_s4, col_s5 = st.columns(3)
+            with col_s3:
+                st.image("assets/braze_step3_entry_schedule.png", caption="Action-Based Triggering on Custom Event", use_container_width=True)
+            with col_s4:
+                st.image("assets/braze_step5_entry_controls.png", caption="Entry Controls & Max Volume Guardrail", use_container_width=True)
+            with col_s5:
+                st.image("assets/braze_step4_user_lookup.png", caption="QA Check via User ID Lookup", use_container_width=True)
+
+        elif "3. German Quiet Hours" in c_step:
+            st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Channel Reachability")
+            st.markdown("""
+            - **Quiet Hours Guardrail:** Never ping users about banking ID late at night! Messages triggered between **10:00 PM and 8:00 AM (German Local Time)** are paused and sent at **8:01 AM**.
+            - **Channel Breakdown:** Braze audits reachability upfront across Email, iOS Push, and Android Push so we never guess who is contactable.
+            """)
+            col_s6, col_s7 = st.columns(2)
+            with col_s6:
+                st.image("assets/braze_step7_quiet_hours.png", caption="Quiet Hours: Suppress Night Sends & Deliver at Next Available Time", use_container_width=True)
+            with col_s7:
+                st.image("assets/braze_step6_target_population.png", caption="Reachable Audience Breakdown across Push & Email Channels", use_container_width=True)
+
+        elif "4. Canvas Journey Flow" in c_step:
+            st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
+            st.markdown("""
+            - **Timing Delays:** Wait 4 hours after registration to give users time to finish on their own before sending a reminder.
+            - **Action Paths (Evaluation Window: 1 day):** Evaluates if the user verified. If yes &rarr; exit canvas. If no &rarr; trigger reminder!
+            - **Multi-Channel Dispatch:** Triggering native iOS Push, Android Push, Content Cards, and Email with deep-links straight back to the ID verification screen.
+            """)
+            col_s8, col_s9, col_s10 = st.columns(3)
+            with col_s8:
+                st.image("assets/braze_step10_delay.png", caption="Delay Step: Timing Execution by Duration or Specific Day", use_container_width=True)
+            with col_s9:
+                st.image("assets/braze_step11_action_paths.png", caption="Action Paths: 1-Day Evaluation Window for KYC Completion", use_container_width=True)
+            with col_s10:
+                st.image("assets/braze_step12_channels.png", caption="Omnichannel Message Selection (Push, Email, In-App, WhatsApp)", use_container_width=True)
+
+        else: # Step 5
+            st.markdown("##### 📊 Step 5: A/B Testing, Holdout Group & Analytics Dashboard")
+            st.markdown("""
+            - **The 70/30 or 50/50 Experiment:** 70% receive the automated recovery journey vs. a **30% silent Control Group (Holdout)** that receives nothing.
+            - **Measuring True Incrementality:** Proves that the +38.7% lift in verified accounts was driven directly by the Canvas rather than organic behavior.
+            - **Analytics Dashboard:** Live tracking of Total Entries, Conversion Rates, and Cumulative Assets under Custody.
+            """)
+            col_s11, col_s12, col_s13 = st.columns(3)
+            with col_s11:
+                st.image("assets/braze_step9_variant_ab.png", caption="A/B Split Test: Testing 1-Day vs 3-Day Delay Variants", use_container_width=True)
+            with col_s12:
+                st.image("assets/braze_step13_control_group.png", caption="Control Group (Holdout): Preserving 30% Unmessaged Baseline", use_container_width=True)
+            with col_s13:
+                st.image("assets/braze_step14_analytics.png", caption="Analytics Scorecard: Entries, Sends & Conversion Lift", use_container_width=True)
 
     with sub_tab2:
         st.markdown("#### 📈 Automated Dollar-Cost Averaging (DCA) Sparplan Engine")
