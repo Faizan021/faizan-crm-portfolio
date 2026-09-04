@@ -152,19 +152,16 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
         st.caption("Step-by-step visual blueprint of how this exact BISON KYC journey is engineered in Braze:")
 
         # Canvas Steps Carousel / Expander Sections
-        c_step = st.radio(
-            "Navigate Braze Canvas Setup Steps:",
-            [
-                "1. Basics & Conversion Goal (3-Day Deadline)",
-                "2. Action-Based Trigger & Volume Limits",
-                "3. German Quiet Hours (10PM - 8AM) & Channel Reach",
-                "4. Canvas Journey Flow & Multi-Channel Dispatch",
-                "5. Holdout Group (A/B Test) & Final Analytics Scorecard"
-            ],
-            horizontal=True
-        )
+        b_tab1, b_tab2, b_tab3, b_tab4, b_tab5, b_tab6 = st.tabs([
+            "1️⃣ Basics & Conversion Goal",
+            "2️⃣ Action Triggers & Exit Rules",
+            "3️⃣ German Quiet Hours & Reach",
+            "4️⃣ Journey Flow & Channels",
+            "5️⃣ Liquid & Context Persistence",
+            "6️⃣ A/B Testing & Scorecard"
+        ])
 
-        if "1. Basics" in c_step:
+        with b_tab1:
             st.markdown("##### 📝 Step 1: Canvas Details & Primary Conversion Event")
             c_s1, c_s2 = st.columns(2)
             with c_s1:
@@ -194,7 +191,7 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
 </div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step2_conversion.png", caption="Braze Console Architecture: Primary Conversion Event & Attribution Window", use_container_width=True)
 
-        elif "2. Action-Based" in c_step:
+        with b_tab2:
             st.markdown("##### ⚡ Step 2: Action-Based Triggers, Entry Volume Caps & Exit Criteria")
             col_b1, col_b2 = st.columns(2)
             with col_b1:
@@ -262,7 +259,7 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
                 st.image("assets/braze_step5_exit_criteria.png", caption="Braze Console Architecture: Exit Criteria & Exception Event Rules", use_container_width=True)
                 st.image("assets/braze_step4_user_lookup.png", caption="Braze Console Architecture: User Lookup & QA Validation", use_container_width=True)
 
-        elif "3. German Quiet Hours" in c_step:
+        with b_tab3:
             st.markdown("##### 🌙 Step 3: German Local Quiet Hours & Reachable Audience")
             c_s3, c_s4 = st.columns(2)
             with c_s3:
@@ -292,7 +289,7 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
 </div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step6_target_population.png", caption="Braze Console Architecture: Reachable Audience by Channel", use_container_width=True)
 
-        elif "4. Canvas Journey Flow" in c_step:
+        with b_tab4:
             st.markdown("##### 🗺️ Step 4: Step Delays, Action Paths & Omnichannel Dispatch")
             c_s5, c_s6, c_s7 = st.columns(3)
             with c_s5:
@@ -314,9 +311,8 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
 </div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step12_channels.png", caption="Braze Canvas Step: Omnichannel Channel Palette", use_container_width=True)
 
-            st.markdown("<div style='margin-top:1.5rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
-            st.markdown("###### 🧠 Advanced Braze Architecture: Canvas Flow & Context vs. Event Properties")
-            
+        with b_tab5:
+            st.markdown("##### 🧠 Step 5: Liquid Personalization & Context Persistence Architecture")
             c_flow1, c_flow2 = st.columns([1.1, 1.9])
             with c_flow1:
                 st.image("assets/braze_step11_action_paths_flow.png", caption="Braze Canvas Architecture: Action Paths (1-Day Window) ➔ Delay ➔ Message Step", use_container_width=True)
@@ -349,7 +345,7 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
 <span style="color:#94a3b8;">Dropped at: {{ context.drop_timestamp | time_zone: 'Europe/Berlin' | date: '%H:%M' }} CET</span>
 </div>""", unsafe_allow_html=True)
 
-            st.markdown("<div style='margin-top:1.5rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-top:1.2rem; margin-bottom:0.8rem; border-top:1px solid #e2e8f0;'></div>", unsafe_allow_html=True)
             st.markdown("###### 📱 Multi-Step Persistence Proof & Defensive Liquid (`abort_message`)")
             
             col_p1, col_p2 = st.columns(2)
@@ -358,7 +354,7 @@ High-impact lifecycle automation for digital asset trading, savings plans, and r
             with col_p2:
                 st.image("assets/braze_step12_push_step2.png", caption="Step 2 Follow-Up Push: Exact Same Entry Property Persists Days Later", use_container_width=True)
             
-            st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #059669; border-radius:10px; padding:16px; margin-top:12px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+            st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #059669; border-radius:10px; padding:16px; margin-top:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
 <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
 <div style="font-size:0.85rem; font-weight:800; color:#1e293b; text-transform:uppercase; letter-spacing:0.5px;">🛡️ Production Engineering Rules: Persistence & Message Abort Safeguards</div>
 <span style="background:#ecfdf5; color:#059669; font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; border:1px solid #a7f3d0;">Enterprise Best Practice</span>
@@ -375,8 +371,8 @@ When triggered, Braze <strong>silently suppresses delivery</strong> for that ind
 </div>
 </div>""", unsafe_allow_html=True)
 
-        else: # Step 5
-            st.markdown("##### 📊 Step 5: A/B Split Test & Analytics Scorecard")
+        with b_tab6:
+            st.markdown("##### 📊 Step 6: A/B Split Test & Analytics Scorecard")
             c_s8, c_s9, c_s10 = st.columns(3)
             with c_s8:
                 st.markdown("""<div style="background:#ffffff; border:1px solid #cbd5e1; border-top:4px solid #0284c7; border-radius:10px; padding:14px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
@@ -396,7 +392,6 @@ When triggered, Braze <strong>silently suppresses delivery</strong> for that ind
 <div style="font-size:0.75rem; color:#334155; line-height:1.5;">Tracks real-time messages sent, open rates, completion throughput (39.4% vs 28.4%), and statistical significance.</div>
 </div>""", unsafe_allow_html=True)
                 st.image("assets/braze_step14_analytics.png", caption="Braze Canvas Step: Real-Time Analytics Scorecard", use_container_width=True)
-
 
     with sub_tab2:
         st.markdown("#### 📈 Automated Dollar-Cost Averaging (DCA) Sparplan Engine")
