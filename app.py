@@ -370,6 +370,22 @@ elif nav_industry == "🤖 2026 AI Agentic CRM & Autonomous Journeys":
 </div>
 """, unsafe_allow_html=True)
 
+    # Simple Pizza Story / Holdout Explanation Box
+    st.markdown("""
+<div style="background:#f0fdf4; border:1px solid #bbf7d0; border-left:4px solid #16a34a; border-radius:10px; padding:14px 18px; margin-bottom:1.4rem;">
+  <div style="font-size:0.85rem; font-weight:800; color:#166534; margin-bottom:4px;">
+    🍕 The Simple Real-World Concept: 50/50 Experiment + 10% Holdout Group
+  </div>
+  <div style="font-size:0.8rem; color:#14532d; line-height:1.5;">
+    <strong>How we prove the AI actually makes more money:</strong><br>
+    • <strong>10% Holdout Group (Gets Nothing):</strong> Some customers would buy or trade anyway. This group gets zero messages so we can measure natural baseline behavior.<br>
+    • <strong>45% Classic Path:</strong> Receives standard pre-written templates (the old way).<br>
+    • <strong>45% AI Agent Path:</strong> The AI inspects customer data (balance, inactivity days, goal progress) and generates a 100% custom title and body live at send time.<br>
+    👉 <em>If the AI path drives higher conversions than both the classic path and holdout after paying for API credits, the AI model has proven true business profit!</em>
+  </div>
+</div>
+""", unsafe_allow_html=True)
+
     col_ai1, col_ai2, col_ai3, col_ai4 = st.columns(4)
     with col_ai1:
         st.markdown('<div class="metric-card"><div class="metric-val" style="color:#7c3aed;">1:1 Dynamic</div><div class="metric-lbl">In-Flight Copy Generation</div></div>', unsafe_allow_html=True)
