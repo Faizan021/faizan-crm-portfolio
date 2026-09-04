@@ -67,9 +67,9 @@ st.markdown("""
 
 <div style="display:flex; gap:10px; flex-wrap:wrap;">
   <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">5+ Years Lifecycle Strategy</span>
-  <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">Braze & Liquid Expert</span>
-  <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">Snowflake SQL & RFM</span>
-  <span style="background:#1e293b; border:1.5px solid #8b5cf6; color:#c084fc; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:700;">🤖 2026 AI Agentic CRM</span>
+  <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">Braze & Liquid Architecture</span>
+  <span style="background:#1e293b; border:1px solid #475569; color:#f1f5f9; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:600;">Snowflake SQL & Data Modeling</span>
+  <span style="background:#1e293b; border:1.5px solid #8b5cf6; color:#c084fc; padding:4px 10px; border-radius:6px; font-size:0.75rem; font-weight:700;">🤖 2026 AI Agentic CRM & Guardrails</span>
 </div>
 </div>
 """, unsafe_allow_html=True)
